@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { Router } from "next/router";
 import { setConfigData } from "../src/redux/slices/configData";
 import { setCategoryData } from "../src/redux/slices/categoryData";
+import Meta from "../src/components/global/Meta";
 
 export default function Home({ categoryData, configData }) {
   // const dispatch = useDispatch();
@@ -30,14 +31,7 @@ export default function Home({ categoryData, configData }) {
 
   return (
     <>
-      <Head>
-        <title>React Next.Js LMS</title>
-        <meta
-          name="description"
-          content="Our Dream LMS Project for Codecanyon"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Meta title={`MPEMR | Ministry of Power, Energy and Mineral Resources`} description={`Ministry of Power, Energy and Mineral Resources`} />
       <Banner />
       <Features />
       <Categories />

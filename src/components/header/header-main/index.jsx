@@ -18,6 +18,8 @@ import { Stack } from "@mui/system";
 import ThemeSwitch from "./ThemeSwitch";
 import { useRouter } from "next/router";
 import { CustomContainer } from "../../../styled-components/CustomStyled.style";
+import DropdownMenu from "./DropdownMenu";
+import { subMenu } from "../menudata.js";
 const logoURL = "/image/logo.png";
 
 function HeaderMain() {
@@ -40,51 +42,57 @@ function HeaderMain() {
     router.push("/auth/sign-in");
   };
   return (
-    <header>
-      <AppBar position="static" color="inherit" elevation={1}>
-        <CustomContainer>
-          <Toolbar
-            sx={{
-              gap: "1rem",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              paddingInline: "0rem !important",
-            }}
-          >
-            <Stack direction="row" gap="1rem" alignItems="center" flexGrow="1">
-              <IconButton
+    <AppBar position="static" color="inherit" elevation={1}>
+      <CustomContainer>
+        <Toolbar
+          sx={{
+            gap: "1rem",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            paddingInline: "0rem !important",
+          }}>
+          <Stack direction="row" gap="1rem" alignItems="center" flexGrow="1">
+            {/* <IconButton
                 size="large"
                 edge="start"
                 color="inherit"
                 aria-label="menu"
-                sx={{ display: { xs: "flex", md: "none" } }}
-              >
+                sx={{ display: { xs: "flex", md: "none" } }}>
                 <MenuIcon />
-              </IconButton>
-              <Logo src={logoURL} width="120px" />
-              <Hidden mdDown>
+              </IconButton> */}
+            {/* <Logo src={logoURL} width="120px" /> */}
+            {/* <Hidden mdDown>
                 <NavCategoroy />
-              </Hidden>
-              <Search />
-            </Stack>
+              </Hidden> */}
+            {/* <Search /> */}
+            {subMenu?.map((item) => {
+              return (
+                <DropdownMenu
+                  key={item?.id}
+                  title={item?.title}
+                  url={item?.url}
+                  data={item?.submenu}
+                />
+              );
+            })}
+          </Stack>
 
-            <Stack direction="row" gap="1rem" alignItems="center">
-              <Hidden lgDown>
-                <NavLinks />
-              </Hidden>
-              <MenuItem>
-                <IconButton
-                  size="large"
-                  aria-label="show 4 new mails"
-                  color="inherit"
-                >
-                  <Badge badgeContent={4} color="error">
-                    <ShoppingCartIcon />
-                  </Badge>
-                </IconButton>
-              </MenuItem>
-              <Hidden mdDown>
+          <Stack direction="row" gap="1rem" alignItems="center">
+            <Hidden lgDown>
+              <NavLinks />
+            </Hidden>
+            <MenuItem>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit">
+                <Badge badgeContent={4} color="error">
+                  <ShoppingCartIcon />
+                </Badge>
+              </IconButton>
+            </MenuItem>
+            {/* <Hidden mdDown>
                 <Divider orientation="vertical" variant="middle" flexItem />
                 {token ? (
                   <Button onClick={signOutClick} size="small" color="inherit">
@@ -98,20 +106,18 @@ function HeaderMain() {
                     <Button
                       onClick={signUpClick}
                       size="small"
-                      variant="contained"
-                    >
+                      variant="contained">
                       {t("Sign Up")}
                     </Button>
                   </>
                 )}
-              </Hidden>
-              <ThemeSwitch />
-              {token && <Profile />}
-            </Stack>
-          </Toolbar>
-        </CustomContainer>
-      </AppBar>
-    </header>
+              </Hidden> */}
+            {/* <ThemeSwitch /> */}
+            {/* {token && <Profile />} */}
+          </Stack>
+        </Toolbar>
+      </CustomContainer>
+    </AppBar>
   );
 }
 

@@ -250,7 +250,8 @@ export const baseThemeOptions = {
     button: {
       fontWeight: 600,
     },
-    fontFamily: '"Rubik","sans-serif"',
+    fontFamily: '"Roboto","sans-serif"',
+
     body1: {
       fontSize: "0.875rem",
       fontWeight: 400,
@@ -265,11 +266,13 @@ export const baseThemeOptions = {
       fontSize: "1rem",
       fontWeight: 500,
       lineHeight: 1.75,
+      fontFamily: '"Inter","sans-serif"',
     },
     subtitle2: {
       fontSize: "0.875rem",
       fontWeight: 500,
       lineHeight: 1.57,
+      fontFamily: '"Inter","sans-serif"',
     },
     overline: {
       fontSize: "0.75rem",
@@ -287,31 +290,37 @@ export const baseThemeOptions = {
       fontWeight: 700,
       fontSize: "3.5rem",
       lineHeight: 1.375,
+      fontFamily: '"Inter","sans-serif"',
     },
     h2: {
       fontWeight: 700,
       fontSize: "3rem",
       lineHeight: 1.375,
+      fontFamily: '"Inter","sans-serif"',
     },
     h3: {
       fontWeight: 700,
       fontSize: "2.25rem",
       lineHeight: 1.375,
+      fontFamily: '"Inter","sans-serif"',
     },
     h4: {
       fontWeight: 700,
       fontSize: "2rem",
       lineHeight: 1.375,
+      fontFamily: '"Inter","sans-serif"',
     },
     h5: {
       fontWeight: 600,
       fontSize: "1.5rem",
       lineHeight: 1.375,
+      fontFamily: '"Inter","sans-serif"',
     },
     h6: {
       fontWeight: 600,
       fontSize: "1rem",
       lineHeight: 1.375,
+      fontFamily: '"Inter","sans-serif"',
     },
   },
   zIndex: {

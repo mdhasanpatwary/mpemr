@@ -1,4 +1,4 @@
-import { styled, alpha, Stack, Button } from "@mui/material";
+import { styled, alpha, Stack, Button, MenuItem } from "@mui/material";
 
 export const StyledHeaderTop = styled(Stack)(({ theme }) => ({
   display: "flex",
@@ -27,5 +27,25 @@ export const LanguageSwitchButton = styled(Button)(({ theme, active }) => ({
       active === "true"
         ? theme.palette.secondary.main
         : alpha(theme.palette.secondary.main, 0.12),
+  },
+}));
+
+export const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
+  a: {
+    position: "relative",
+    display: "flex",
+    alignItems: "center",
+    fontWeight: "600",
+    gap: "5px",
+  },
+  [theme.breakpoints.down("lg")]: {
+    minHeight: "36px",
+    flexWrap: "wrap",
+    ".MuiCollapse-wrapperInner": {
+      paddingBlockStart: "10px",
+    },
+    ".MuiMenuItem-root": {
+      paddingBlock: "3px",
+    },
   },
 }));
