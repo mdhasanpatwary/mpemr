@@ -13,7 +13,7 @@ const getValues = (settings) => ({
 });
 
 const CustomLanguage = () => {
-  const [language, setLanguage] = useState("");
+  const [language, setLanguage] = useState("en");
   const { settings, saveSettings } = useSettings();
   const [values, setValues] = useState(getValues(settings));
 

@@ -5,7 +5,9 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Badge from "@mui/material/Badge";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import DashboardCustomizeOutlinedIcon from "@mui/icons-material/DashboardCustomizeOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
 import { Divider, Hidden, MenuItem } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
@@ -52,7 +54,7 @@ function HeaderMain() {
             alignItems: "center",
             paddingInline: "0rem !important",
           }}>
-          <Stack direction="row" gap="1rem" alignItems="center" flexGrow="1">
+          <Stack direction="row" alignItems="center" flexGrow="1">
             {/* <IconButton
                 size="large"
                 edge="start"
@@ -78,20 +80,19 @@ function HeaderMain() {
             })}
           </Stack>
 
-          <Stack direction="row" gap="1rem" alignItems="center">
-            <Hidden lgDown>
+          <Stack direction="row" alignItems="center">
+            {/* <Hidden lgDown>
               <NavLinks />
-            </Hidden>
-            <MenuItem>
-              <IconButton
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit">
-                <Badge badgeContent={4} color="error">
-                  <ShoppingCartIcon />
-                </Badge>
-              </IconButton>
-            </MenuItem>
+            </Hidden> */}
+            <IconButton size="large" aria-label="Menu" color="inherit">
+              <DashboardCustomizeOutlinedIcon />
+            </IconButton>
+            <IconButton size="large" aria-label="Search" color="inherit">
+              <SearchOutlinedIcon />
+            </IconButton>
+            <IconButton size="large" aria-label="Video" color="inherit">
+              <VideocamOutlinedIcon />
+            </IconButton>
             {/* <Hidden mdDown>
                 <Divider orientation="vertical" variant="middle" flexItem />
                 {token ? (

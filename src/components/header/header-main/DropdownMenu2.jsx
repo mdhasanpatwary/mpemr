@@ -8,9 +8,8 @@ import Link from "next/link";
 import React, { useRef, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import { CustomMenuItem } from "../Header.style";
-import DropdownMenu2 from "./DropdownMenu2";
 
-const DropdownMenu = ({ data, title, url }) => {
+const DropdownMenu2 = ({ data, title, url }) => {
   const theme = useTheme();
   const tabScreen = useMediaQuery(theme.breakpoints.down("lg"));
 
@@ -58,8 +57,8 @@ const DropdownMenu = ({ data, title, url }) => {
                 onClose={handleClose}
                 elevation={0}
                 anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
+                  vertical: "top",
+                  horizontal: "right",
                 }}
                 transformOrigin={{
                   vertical: "top",
@@ -67,33 +66,35 @@ const DropdownMenu = ({ data, title, url }) => {
                 }}
                 sx={{
                   pointerEvents: "none",
-                  textTransform: "capitalize",
                   ".MuiPaper-root": {
                     pointerEvents: "auto",
                     padding: "10px",
                     borderTopRightRadius: "0",
                     borderTopLeftRadius: "0",
-                    ".MuiButtonBase-root a": {
-                      fontWeight: "400!important",
-                    },
+                    // ".MuiButtonBase-root a": {
+                    //   fontWeight: "400!important",
+                    // },
                   },
                 }}>
-                {data?.map((item, index) => (
-                  <React.Fragment key={index}>
-                    {item?.submenu?.length ? (
-                      <DropdownMenu2
-                        data={item?.submenu}
-                        title={item?.title}
-                        url={item?.url}
-                      />
-                    ) : (
-                      <MenuItem disableRipple>
-                        <Link href={item?.url ? item?.url : "#"}>
-                          {item?.title}
-                        </Link>
-                      </MenuItem>
-                    )}
-                  </React.Fragment>
+                {data?.map(({ title, url }, index) => (
+                  <MenuItem
+                    disableRipple
+                    key={index}
+                    sx={{
+                      minHeight: "0",
+                      paddingY: "8px",
+                      "&:hover": {
+                        // backgroundColor: "primary.light",
+                        color: theme.palette.primary.main,
+                      },
+                      borderRadius: "5px",
+                      "&:not(:last-child)": {
+                        // borderBottom: `1px solid ${theme.palette.divider}`,
+                      },
+                      minWidth: { lg: "200px" },
+                    }}>
+                    <Link href={url ? url : "#"}>{title}</Link>
+                  </MenuItem>
                 ))}
               </Popover>
             ) : (
@@ -135,6 +136,6 @@ const DropdownMenu = ({ data, title, url }) => {
   );
 };
 
-DropdownMenu.propTypes = {};
+DropdownMenu2.propTypes = {};
 
-export default DropdownMenu;
+export default DropdownMenu2;

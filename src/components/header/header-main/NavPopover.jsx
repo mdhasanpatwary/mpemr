@@ -52,8 +52,7 @@ function NavPopover({
         className={classes.popover}
         classes={{
           paper: classes.popoverContent,
-        }}
-      >
+        }}>
         <CategoryPopover handleClickSub={handleClickSub} />
       </Popover>
 
@@ -72,8 +71,7 @@ function NavPopover({
           className={classes.popover}
           classes={{
             paper: classes.popoverContent,
-          }}
-        >
+          }}>
           <Stack padding=".5rem" gap=".5rem">
             {subCategory?.details?.length > 0 ? (
               <>
@@ -92,8 +90,7 @@ function NavPopover({
                         <Typography
                           variant="body2"
                           width="120px"
-                          className={classes.textTruncate}
-                        >
+                          className={classes.textTruncate}>
                           {subCategory.title}
                         </Typography>
                       </Stack>

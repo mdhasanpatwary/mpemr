@@ -12,6 +12,7 @@ export const subMenu = [
     {
       id: "3",
       title: "Electricity",
+      url: "#",
       submenu: [
         {
           id: "4",
@@ -21,6 +22,7 @@ export const subMenu = [
         {
           id: "5",
           title: "web development",
+          url: "#",
           submenu: [
             {
               id: "6",
@@ -30,6 +32,7 @@ export const subMenu = [
             {
               id: "7",
               title: "Backend",
+              url: "#",
               submenu: [
                 {
                   id: "8",
@@ -55,6 +58,7 @@ export const subMenu = [
     {
       id: "11",
       title: "Energy & Mineral",
+      url: "#",
       submenu: [
         {
           id: "14",
@@ -87,6 +91,7 @@ export const subMenu = [
       id: "14",
       url: "#",
       title: "Others",
+      url: "#",
       submenu: [
         {
           id: "15",

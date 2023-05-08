@@ -35,8 +35,9 @@ export const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
     position: "relative",
     display: "flex",
     alignItems: "center",
-    fontWeight: "600",
+    fontWeight: "500",
     gap: "5px",
+    textTransform: "capitalize",
   },
   [theme.breakpoints.down("lg")]: {
     minHeight: "36px",
