@@ -1,6 +1,5 @@
-import { Button, Grid, Typography, Paper } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import { BannerWrap } from "./Banner.style";
-import CustomImage from "../utils/CustomImage";
 import { CustomContainer } from "../../styled-components/CustomStyled.style";
 const BannerImg = "/image/media/banner.png";
 
@@ -19,13 +18,6 @@ const Banner = () => {
             </Typography>
             <Button variant="outlined">View All Courses</Button>
           </Grid>
-          {/* <Grid item xs={12} lg={8} textAlign="center">
-              <CustomImage
-                src={BannerImg}
-                altText="Banner Image"
-                objectFit="contained"
-              />
-            </Grid> */}
         </Grid>
       </BannerWrap>
     </CustomContainer>

@@ -1,19 +1,13 @@
-import Head from "next/head";
 import Banner from "../src/components/banner";
-import Categories from "../src/components/categories";
-import Courses from "../src/components/course";
-import TopTenLatestCourse from "../src/components/course/TopTenLatestCourse";
-import Features from "../src/components/feature";
-import { categories_api, config_api } from "../src/api-manage/ApiRoutes";
+import { config_api } from "../src/api-manage/ApiRoutes";
 import MainApi from "../src/api-manage/MainApi";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { Router } from "next/router";
 import { setConfigData } from "../src/redux/slices/configData";
-import { setCategoryData } from "../src/redux/slices/categoryData";
 import Meta from "../src/components/global/Meta";
 
-export default function Home({ categoryData, configData }) {
+const Home = ({ categoryData, configData }) => {
   // const dispatch = useDispatch();
   // useEffect(() => {
   //   if (configData && configData.length === 0) {
@@ -33,10 +27,6 @@ export default function Home({ categoryData, configData }) {
     <>
     <Meta title={`MPEMR | Ministry of Power, Energy and Mineral Resources`} description={`Ministry of Power, Energy and Mineral Resources`} />
       <Banner />
-      <Features />
-      <Categories />
-      <Courses />
-      <TopTenLatestCourse />
     </>
   );
 }
@@ -78,3 +68,5 @@ export const getServerSideProps = async () => {
     },
   };
 };
+
+export default Home;

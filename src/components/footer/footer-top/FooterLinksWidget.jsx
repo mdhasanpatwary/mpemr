@@ -2,7 +2,7 @@ import { Typography, Stack } from "@mui/material";
 import { useRouter } from "next/router";
 import { PropTypes } from "prop-types";
 
-function FooterLinksWidget({ footerLinks, title }) {
+const FooterLinksWidget = ({ footerLinks, title }) => {
   const router = useRouter();
   function footerLinkClick(url) {
     router.push(url);
@@ -22,8 +22,7 @@ function FooterLinksWidget({ footerLinks, title }) {
                 cursor: "pointer",
                 transition: "all .3s ease",
                 "&:hover": { color: "primary.main" },
-              }}
-            >
+              }}>
               {item.linkText}
             </Typography>
           );
@@ -31,7 +30,7 @@ function FooterLinksWidget({ footerLinks, title }) {
       </Stack>
     </>
   );
-}
+};
 
 FooterLinksWidget.propTypes = {
   footerLinks: PropTypes.array,

@@ -13,7 +13,7 @@ import {
   SettingsProvider,
 } from "../src/contexts/settings-context";
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   const queryClient = new QueryClient();
   //storing persisted data
   let persistor = persistStore(store);

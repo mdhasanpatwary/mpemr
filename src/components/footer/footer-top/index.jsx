@@ -9,7 +9,7 @@ import {
 } from "./demoLinks";
 import FooterLinksWidget from "./FooterLinksWidget";
 
-function index() {
+const Index = () => {
   return (
     <Stack sx={{ paddingTop: "80px", paddingBottom: "30px" }}>
       <CustomContainer>
@@ -36,6 +36,6 @@ function index() {
       </CustomContainer>
     </Stack>
   );
-}
+};
 
-export default index;
+export default Index;

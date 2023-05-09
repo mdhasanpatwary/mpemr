@@ -4,7 +4,7 @@ import Footer from "../footer";
 import { NoSsr } from "@mui/material";
 // import Header from "../header/index";
 
-function Layout({ children }) {
+const Layout = ({ children }) => {
   const DynamicHeadear = dynamic(() => import("../header"), {
     ssr: false,
   });

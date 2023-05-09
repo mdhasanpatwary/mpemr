@@ -1,6 +1,6 @@
 import { Typography, useMediaQuery, useTheme } from "@mui/material";
 
-function AboutUs() {
+const AboutUs = () => {
   const theme = useTheme();
   const isLarge = useMediaQuery(theme.breakpoints.up("sm"));
   return (
@@ -16,6 +16,6 @@ function AboutUs() {
       </Typography>
     </>
   );
-}
+};
 
 export default AboutUs;

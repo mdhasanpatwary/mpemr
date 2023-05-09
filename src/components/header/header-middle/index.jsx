@@ -2,11 +2,10 @@ import { StyledHeaderMiddle } from "../Header.style";
 import { CustomContainer } from "../../../styled-components/CustomStyled.style";
 import { Stack } from "@mui/system";
 import { t } from "i18next";
-import Logo from "../../logo/Logo";
 import LatestNewsTicker from "./LatestNewsTicker";
-import CustomImage from "../../logo/CustomImage";
 import { Box, Typography, alpha } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import CustomImage from "../../global/CustomImage";
 const logoURL = "/image/logo.png";
 const imgURL = "/image/media/mujib.png";
 
@@ -51,7 +50,7 @@ const HeaderMiddle = () => {
           }}>
           <Stack direction="row" gap={3} alignItems="center">
             <CustomImage src={imgURL} width="81" />
-            <Logo src={logoURL} width="175" />
+            <CustomImage src={logoURL} width="175" logo />
           </Stack>
           <Stack
             direction="row"

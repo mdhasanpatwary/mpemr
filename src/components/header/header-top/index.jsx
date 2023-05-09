@@ -1,8 +1,8 @@
 import { Stack } from "@mui/material";
 import { CustomContainer } from "../../../styled-components/CustomStyled.style";
 import { StyledHeaderTop } from "../Header.style";
-import SocialLinks from "../../footer/footer-bottom/SocialLinks";
 import CustomLanguage from "../header-main/CustomLanguage";
+import SocialLinks from "../../global/SocialLinks";
 
 const HeaderTop = () => {
   return (

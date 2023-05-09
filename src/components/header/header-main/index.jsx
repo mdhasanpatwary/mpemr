@@ -12,7 +12,7 @@ import DropdownMenu from "./DropdownMenu";
 import { subMenu } from "../menudata.js";
 const logoURL = "/image/logo.png";
 
-function HeaderMain() {
+const HeaderMain = () => {
   const [showSearch, setShowSearch] = React.useState(false);
   return (
     <AppBar position="static" color="inherit" elevation={1}>
@@ -58,6 +58,6 @@ function HeaderMain() {
       </CustomContainer>
     </AppBar>
   );
-}
+};
 
 export default HeaderMain;
