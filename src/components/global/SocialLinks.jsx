@@ -7,12 +7,12 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { useSelector } from "react-redux";
 
-const SocialLinks = () => {
+const SocialLinks = ({ center }) => {
   const { configData } = useSelector((state) => state.configData);
   const socialMedia = configData?.details?.social_link;
   return (
     <>
-    {/* // <Stack direction="row" gap="1.25rem">
+      {/* // <Stack direction="row" gap="1.25rem">
     //   {socialMedia &&
     //     socialMedia?.length > 0 &&
     //     socialMedia?.map((item) => {
@@ -32,12 +32,15 @@ const SocialLinks = () => {
     //       }
     //     })}
     // </Stack> */}
-    <Stack direction="row" gap="1.25rem">
-      <SocialLink url="#" icon={FacebookIcon} />
-      <SocialLink url="#" icon={TwitterIcon}  />
-      <SocialLink url="#" icon={InstagramIcon}  />
-      <SocialLink url="#" icon={WhatsAppIcon}  />
-    </Stack>
+      <Stack
+        direction="row"
+        gap="1.25rem"
+        justifyContent={center ? "center" : "flex-start"}>
+        <SocialLink url="#" icon={FacebookIcon} />
+        <SocialLink url="#" icon={TwitterIcon} />
+        <SocialLink url="#" icon={InstagramIcon} />
+        <SocialLink url="#" icon={WhatsAppIcon} />
+      </Stack>
     </>
   );
 };

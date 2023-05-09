@@ -75,9 +75,8 @@ const text = {
 };
 
 const footer = {
-  backgroundColor: "#0a1c3a",
-  bottomBgColor: "#1f3b64",
-  color: "#f5f5f5",
+  backgroundColor: "#000225",
+  color: "rgba(255, 255, 255, .66)",
 };
 
 const customColor = {

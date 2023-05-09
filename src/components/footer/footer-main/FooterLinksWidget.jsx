@@ -1,15 +1,24 @@
+import { useTheme } from "@emotion/react";
 import { Typography, Stack } from "@mui/material";
 import { useRouter } from "next/router";
 import { PropTypes } from "prop-types";
 
 const FooterLinksWidget = ({ footerLinks, title }) => {
   const router = useRouter();
+  const theme = useTheme();
   function footerLinkClick(url) {
     router.push(url);
   }
   return (
     <>
-      <Typography variant="h5" mb={2} sx={{ textTransform: "capitalize" }}>
+      <Typography
+        variant="h5"
+        mb={2}
+        sx={{
+          textTransform: "capitalize",
+          fontWeight: "500",
+          color: theme.palette.neutral[200],
+        }}>
         {title}
       </Typography>
       <Stack spacing={1}>
@@ -20,8 +29,9 @@ const FooterLinksWidget = ({ footerLinks, title }) => {
               onClick={() => footerLinkClick(item.url)}
               sx={{
                 cursor: "pointer",
+                color: theme.palette.footer.color,
                 transition: "all .3s ease",
-                "&:hover": { color: "primary.main" },
+                "&:hover": { color: theme.palette.secondary.main },
               }}>
               {item.linkText}
             </Typography>

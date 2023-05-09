@@ -1,12 +1,12 @@
 import { FooterWrapStyle } from "./Footer.style";
 import FooterBottom from "./footer-bottom";
-import FooterTop from "./footer-top";
+import FooterMain from "./footer-main";
 
 const Footer = () => {
   return (
     <footer>
       <FooterWrapStyle>
-        <FooterTop />
+        <FooterMain />
         <FooterBottom />
       </FooterWrapStyle>
     </footer>
