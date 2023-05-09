@@ -71,9 +71,6 @@ const DropdownMenu2 = ({ data, title, url }) => {
                     padding: "10px",
                     borderTopRightRadius: "0",
                     borderTopLeftRadius: "0",
-                    // ".MuiButtonBase-root a": {
-                    //   fontWeight: "400!important",
-                    // },
                   },
                 }}>
                 {data?.map(({ title, url }, index) => (

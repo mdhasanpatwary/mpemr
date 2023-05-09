@@ -1,4 +1,3 @@
-import Search from "../header/header-main/Search";
 import { Button, Grid, Typography, Paper } from "@mui/material";
 import { BannerWrap } from "./Banner.style";
 import CustomImage from "../utils/CustomImage";

@@ -2,7 +2,7 @@ import React from "react";
 import { Stack, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material/styles";
-import { CustomSwitch } from "./Navbar.style";
+import { CustomSwitch } from "../Header.style";
 import { useSettings } from "../../../contexts/use-settings";
 // const getValues = (settings) => ({
 //   direction: settings.direction,
@@ -36,8 +36,7 @@ const ThemeSwitches = () => {
       direction="row"
       alignItems="center"
       justifyContent="center"
-      spacing={0.8}
-    >
+      spacing={0.8}>
       <CustomSwitch
         checked={settings.theme === "light"}
         onChange={handleChange}
