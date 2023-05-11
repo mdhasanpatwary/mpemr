@@ -16,7 +16,7 @@ const Index = () => {
     <Stack sx={{ paddingTop: "80px", paddingBottom: "30px" }}>
       <CustomContainer>
         <Grid container spacing={2}>
-          <Grid item sm={6} lg={3}>
+          <Grid item sm={6} lg={2}>
             <CustomImage width={168} src={footerLogo} />
           </Grid>
           <Grid item sm={6} lg={3}>
@@ -25,7 +25,7 @@ const Index = () => {
               title="Development Partner"
             />
           </Grid>
-          <Grid item sm={6} lg={3}>
+          <Grid item sm={6} lg={4}>
             <>
               <Typography
                 variant="h5"
@@ -44,7 +44,7 @@ const Index = () => {
                   href="mailto:info@mpemr.gov.bd">
                   info@mpemr.gov.bd
                 </Link>
-                <Stack direction="row" spacing={1}>
+                <Stack direction="row" flexWrap="wrap" spacing={1}>
                   <Typography
                     variant="body1"
                     color={theme.palette.footer.color}>

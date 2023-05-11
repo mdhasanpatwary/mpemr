@@ -36,7 +36,7 @@ const DropdownMenu = ({ data, title, url }) => {
         sx={{
           a: {
             display: "flex",
-            width: "100%",
+            inlineSize: "100%",
             justifyContent: "space-between",
           },
         }}>

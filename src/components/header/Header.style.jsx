@@ -38,6 +38,7 @@ export const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
     fontWeight: "500",
     gap: "5px",
     textTransform: "capitalize",
+    fontSize: "1rem",
   },
   [theme.breakpoints.down("lg")]: {
     minHeight: "36px",

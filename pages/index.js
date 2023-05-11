@@ -6,6 +6,9 @@ import { useEffect } from "react";
 import { Router } from "next/router";
 import { setConfigData } from "../src/redux/slices/configData";
 import Meta from "../src/components/global/Meta";
+import About from '../src/components/about';
+import Gallery from '../src/components/gallery';
+import { AboutGalleryWrap } from "../src/styled-components/CustomStyled.style";
 
 const Home = ({ categoryData, configData }) => {
   // const dispatch = useDispatch();
@@ -27,6 +30,10 @@ const Home = ({ categoryData, configData }) => {
     <>
     <Meta title={`MPEMR | Ministry of Power, Energy and Mineral Resources`} description={`Ministry of Power, Energy and Mineral Resources`} />
       <Banner />
+      <AboutGalleryWrap pt={12.5} pb={6}>
+        <About />
+        <Gallery />
+      </AboutGalleryWrap>
     </>
   );
 }

@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-function CustomImage({ src, alt, logo, ...rest }) {
+function CustomImage({ src, alt, logo, boxClass, ...rest }) {
   // const [imgSrc, setImgSrc] = useState("");
   // useEffect(() => {
   //   setImgSrc(src);
@@ -26,7 +26,7 @@ function CustomImage({ src, alt, logo, ...rest }) {
           />
         </Link>
       ) : (
-        <Box>
+        <Box className={boxClass && boxClass}>
           <img
             src={src}
             onError={({ target }) => {

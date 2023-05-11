@@ -1,59 +1,36 @@
-import { Stack, Paper, styled } from "@mui/material";
-
-// export const CustomPaperBigCard = styled(Paper)(
-//   ({
-//     theme,
-//     nopadding,
-//     minheight,
-//     height,
-//     backgroundColor,
-//     padding,
-//     width,
-//     noboxshadow,
-//   }) => ({
-//     backgroundColor: theme.palette.background.paper,
-//     padding: nopadding === "true" ? "none" : padding ? padding : "1.875rem",
-//     width: width ? width : "100%",
-//     height: height ? height : "100%",
-//     minHeight: minheight && minheight,
-//     borderRadius: "10px",
-//     boxShadow:
-//       noboxshadow === "true"
-//         ? "none"
-//         : `0px 0px 2px rgba(145, 158, 171, 0.2), 0px 5px 20px ${theme.palette.paperBoxShadow}`,
-//     // marginBottom: '30px',
-//   })
-// );
+import { Stack, styled, Box } from "@mui/material";
 export const LayoutWrap = styled(Stack)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   minHeight: "100vh",
 }));
 
-// export const FormControl = styled(Stack)(({ theme }) => ({
-//   marginBottom: "2rem",
-//   "& label": {
-//     marginBottom: ".5rem",
-//   },
-//   "& input": {
-//     inineSize: "100%",
-//     padding: ".325rem 1rem",
-//     borderRadius: ".25rem",
-//   },
-// }));
-
 export const CustomContainer = styled(Stack)(({ theme, maxWidth }) => ({
-  maxInlineSize: maxWidth ? maxWidth : "1448px",
+  maxInlineSize: maxWidth ? maxWidth : "1320px",
   inlineSize: "100%",
   paddingInline: "1rem",
   marginInline: "auto",
 }));
 
-export const Media = styled("div")(({ theme, gap }) => ({
-  display: "flex",
-  alignItems: "center",
-  gap: gap ? gap : "1rem",
-}));
+// export const Media = styled("div")(({ theme, gap }) => ({
+//   display: "flex",
+//   alignItems: "center",
+//   gap: gap ? gap : "1rem",
+// }));
 
-export const MediaBody = styled("div")(({ theme }) => ({
-  flex: 1,
+// export const MediaBody = styled("div")(({ theme }) => ({
+//   flex: 1,
+// }));
+
+export const AboutGalleryWrap = styled(Box)(({ theme }) => ({
+  position: "relative",
+  "&::after": {
+    inlineSize: "100%",
+    blockSize: "75%",
+    backgroundColor: theme.palette.neutral[200],
+    content: '""',
+    position: "absolute",
+    zIndex:-1,
+    insetInlineStart: 0,
+    insetBlockStart: 0
+  }
 }));
