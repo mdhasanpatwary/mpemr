@@ -27,6 +27,7 @@
     "react-google-login": "^5.2.2",
     "react-hot-toast": "^2.4.0",
     "react-i18next": "^12.1.1",
+    "react-modal-video": "^2.0.0",
     "react-query": "^3.39.3",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1",

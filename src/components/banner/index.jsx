@@ -16,7 +16,7 @@ const Banner = () => {
   const theme = useTheme();
 
   return (
-    <SwiperWrap>
+    <SwiperWrap PaginationCenter="true">
       <Swiper
         pagination={{
           clickable: true,
@@ -28,7 +28,7 @@ const Banner = () => {
         creativeEffect={{
           prev: {
             shadow: true,
-            translate: [0, 0, -200],
+            translate: [0, 0, -800],
           },
           next: {
             translate: ["100%", 0, 0],

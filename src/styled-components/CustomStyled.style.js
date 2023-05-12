@@ -40,12 +40,3 @@ export const AboutGalleryWrap = styled(Box)(({ theme }) => ({
     insetBlockStart: 0
   }
 }));
-
-export const CustomButton = styled(Button)(({ theme }) => ({
-  backgroundColor: "#000",
-  color: "#fff",
-  borderRadius: "50rem",
-  "&:hover": {
-    backgroundColor: theme.palette.primary.main,
-  }
-}));

@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  CustomButton,
-  CustomContainer,
-} from "../../styled-components/CustomStyled.style";
+import { CustomContainer } from "../../styled-components/CustomStyled.style";
 import {
   Button,
   Grid,
@@ -15,6 +12,7 @@ import { CustomImageListItem } from "./About.style";
 import Title from "../global/Title";
 import { useTheme } from "@emotion/react";
 import LocalLibraryOutlinedIcon from "@mui/icons-material/LocalLibraryOutlined";
+import { CustomButton } from "../../styled-components/CustomButton";
 
 const AboutImg1 = "/image/media/about1.png";
 const AboutImg2 = "/image/media/about2.png";
@@ -78,7 +76,7 @@ const Index = () => {
             Read More
           </CustomButton>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{ img: { maxWidth: "100%" } }}>
           <CustomImage width="865" src={AboutBottomImg} />
         </Grid>
       </Grid>

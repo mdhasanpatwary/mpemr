@@ -9,6 +9,7 @@ import Meta from "../src/components/global/Meta";
 import About from '../src/components/about';
 import Gallery from '../src/components/gallery';
 import { AboutGalleryWrap } from "../src/styled-components/CustomStyled.style";
+import { Box } from "@mui/material";
 
 const Home = ({ categoryData, configData }) => {
   // const dispatch = useDispatch();
@@ -32,6 +33,7 @@ const Home = ({ categoryData, configData }) => {
       <Banner />
       <AboutGalleryWrap pt={12.5} pb={6}>
         <About />
+        <Box pb={6}></Box>
         <Gallery />
       </AboutGalleryWrap>
     </>

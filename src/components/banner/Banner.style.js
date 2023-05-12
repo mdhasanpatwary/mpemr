@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 const BannerImg = "/image/media/banner.png";
 
 export const SwiperWrap = styled(Box)(
-  ({ theme }) => ({
+  ({ theme, borderRadius, PaginationCenter }) => ({
     ".swiper": {
       inlineSize: "100%",
       blockSize: "100%",
@@ -11,11 +11,13 @@ export const SwiperWrap = styled(Box)(
         backgroundColor: theme.palette.neutral[200],
         position: "relative",
         zIndex: 1,
+        borderRadius: borderRadius ? borderRadius : "initial",
         "& img" : {
           display: "block",
           inlineSize: "100%",
           blockSize: "100%",
           objectFit: "cover",
+          borderRadius: borderRadius ? borderRadius : ".625rem"
         },
         ".banner-bg-img": {
           position: "absolute",
@@ -35,11 +37,14 @@ export const SwiperWrap = styled(Box)(
         }
       },
       "&-pagination": {
-        display: "flex",
+        display: PaginationCenter ? "flex" : "inline-flex",
         alignItems: "center",
         justifyContent: "center",
         insetBlockEnd: "30px !important",
+        insetInlineStart: PaginationCenter ? "initial" : "30px !important",
+        width: PaginationCenter? "100%" : "auto !important",
       },
+
       "&-pagination-bullet": {
         inlineSize: "6px",
         blockSize: "6px",
