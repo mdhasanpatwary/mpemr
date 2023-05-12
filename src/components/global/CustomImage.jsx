@@ -15,9 +15,6 @@ function CustomImage({ src, alt, logo, boxClass, ...rest }) {
           <img
             src={src}
             onError={({ target }) => {
-              // currentTarget.onerror = null; // prevents looping
-              //   setImgSrc(placeholder.src);
-              // setImgSrc("https://via.placeholder.com/1200");
               target.src = "https://via.placeholder.com/1200";
             }}
             loading="lazy"

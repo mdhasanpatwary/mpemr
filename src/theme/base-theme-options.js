@@ -256,7 +256,7 @@ export const baseThemeOptions = {
     body1: {
       fontSize: "1rem",
       fontWeight: 400,
-      lineHeight: 1.5,
+      lineHeight: 1.8,
     },
     body2: {
       fontSize: ".875rem",
