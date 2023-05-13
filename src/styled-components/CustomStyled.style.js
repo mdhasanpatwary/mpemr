@@ -28,7 +28,7 @@ export const AboutGalleryWrap = styled(Box)(({ theme }) => ({
   zIndex: 1,
   "&::after": {
     inlineSize: "100%",
-    blockSize: "75%",
+    blockSize: "60%",
     backgroundColor: theme.palette.background.custom,
     backgroundImage: `url(${AboutBg})`,
     backgroundSize: "cover",

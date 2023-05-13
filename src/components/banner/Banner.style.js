@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 const BannerImg = "/image/media/banner.png";
 
 export const SwiperWrap = styled(Box)(
-  ({ theme, borderRadius, PaginationCenter }) => ({
+  ({ theme, borderRadius, paginationcenter }) => ({
     ".swiper": {
       inlineSize: "100%",
       blockSize: "100%",
@@ -37,12 +37,12 @@ export const SwiperWrap = styled(Box)(
         }
       },
       "&-pagination": {
-        display: PaginationCenter ? "flex" : "inline-flex",
+        display: paginationcenter ? "flex" : "inline-flex",
         alignItems: "center",
         justifyContent: "center",
         insetBlockEnd: "30px !important",
-        insetInlineStart: PaginationCenter ? "initial" : "30px !important",
-        width: PaginationCenter? "100%" : "auto !important",
+        insetInlineStart: paginationcenter ? "initial" : "30px !important",
+        width: paginationcenter? "100%" : "auto !important",
       },
 
       "&-pagination-bullet": {

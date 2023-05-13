@@ -16,7 +16,7 @@ const Banner = () => {
   const theme = useTheme();
 
   return (
-    <SwiperWrap PaginationCenter="true">
+    <SwiperWrap paginationcenter="true">
       <Swiper
         pagination={{
           clickable: true,

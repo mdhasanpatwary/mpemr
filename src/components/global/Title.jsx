@@ -2,7 +2,7 @@ import { useTheme } from "@emotion/react";
 import { Typography } from "@mui/material";
 import React from "react";
 
-function Title({ title, subTitle, marginBottom }) {
+function Title({ title, subTitle, description, marginBottom, center }) {
   const theme = useTheme();
   return (
     <>
@@ -20,9 +20,23 @@ function Title({ title, subTitle, marginBottom }) {
           {subTitle}
         </Typography>
       )}
-      <Typography variant="h2" mb={marginBottom ? marginBottom : "1rem"}>
+      <Typography
+        variant="h2"
+        textAlign={center ? "center" : "start"}
+        mb={marginBottom ? marginBottom : 2}>
         {title}
       </Typography>
+      {description && (
+        <Typography
+          variant="body1"
+          textAlign={center ? "center" : "start"}
+          maxWidth={740}
+          color={theme.palette.text.secondary}
+          mx={center ? "auto" : "initial"}
+          mb={4}>
+          {description}
+        </Typography>
+      )}
     </>
   );
 }

@@ -8,8 +8,11 @@ import { setConfigData } from "../src/redux/slices/configData";
 import Meta from "../src/components/global/Meta";
 import About from '../src/components/about';
 import Gallery from '../src/components/gallery';
-import { AboutGalleryWrap } from "../src/styled-components/CustomStyled.style";
+import { AboutGalleryWrap, CustomContainer } from "../src/styled-components/CustomStyled.style";
 import { Box } from "@mui/material";
+import { StatisticsWrap } from "../src/components/statistics/Statistics.style";
+import StatisticsChart from "../src/components/statistics/StatisticsChart";
+import Title from "../src/components/global/Title";
 
 const Home = ({ categoryData, configData }) => {
   // const dispatch = useDispatch();
@@ -36,6 +39,12 @@ const Home = ({ categoryData, configData }) => {
         <Box pb={6}></Box>
         <Gallery />
       </AboutGalleryWrap>
+      <StatisticsWrap>
+        <CustomContainer>
+        <Title title="Energy in Statistics" description="Responsible for policy-making and implementation in all matters related to transmission & distribution. Power sector is inextricably linked to all three functions generation." marginBottom=".8rem" center />
+        </CustomContainer>
+        <StatisticsChart />
+      </StatisticsWrap>
     </>
   );
 }
