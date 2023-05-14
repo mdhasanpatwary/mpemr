@@ -25,7 +25,7 @@ export const baseThemeOptions = {
       },
       styleOverrides: {
         root: {
-          textTransform: "none",
+          textTransform: "capitalize",
         },
         sizeSmall: {
           padding: "6px 16px",
@@ -106,33 +106,33 @@ export const baseThemeOptions = {
           WebkitFontSmoothing: "antialiased",
           display: "flex",
           flexDirection: "column",
-          minHeight: "100%",
-          width: "100%",
+          minBlockSize: "100%",
+          inlineSize: "100%",
         },
         body: {
           display: "flex",
           flex: "1 1 auto",
           flexDirection: "column",
           minHeight: "100%",
-          width: "100%",
+          inlineSize: "100%",
         },
         "#__next": {
           display: "flex",
           flex: "1 1 auto",
           flexDirection: "column",
-          height: "100%",
-          width: "100%",
+          blockSize: "100%",
+          inlineSize: "100%",
         },
         "#nprogress": {
           pointerEvents: "none",
         },
         "#nprogress .bar": {
           backgroundColor: "#5048E5",
-          height: 3,
-          left: 0,
+          blockSize: 3,
+          insetInlineStart: 0,
           position: "fixed",
-          top: 0,
-          width: "100%",
+          insetBlockStart: 0,
+          inlineSize: "100%",
           zIndex: 2000,
         },
       },
@@ -166,7 +166,7 @@ export const baseThemeOptions = {
         root: {
           marginRight: "16px",
           "&.MuiListItemIcon-root": {
-            minWidth: "unset",
+            minInlineSize: "unset",
           },
         },
       },
@@ -174,7 +174,7 @@ export const baseThemeOptions = {
     MuiOutlinedInput: {
       styleOverrides: {
         input: {
-          fontWeight: 500,
+          fontWeight: 400,
         },
       },
     },
@@ -206,9 +206,9 @@ export const baseThemeOptions = {
           fontSize: 14,
           fontWeight: 500,
           lineHeight: 1.71,
-          minWidth: "auto",
-          paddingLeft: 0,
-          paddingRight: 0,
+          minInlineSize: "auto",
+          paddingInlineStart: 0,
+          paddingInlineEnd: 0,
           textTransform: "none",
           "& + &": {
             marginLeft: 24,
@@ -250,6 +250,7 @@ export const baseThemeOptions = {
   typography: {
     button: {
       fontWeight: 600,
+      fontFamily: '"Inter","sans-serif"',
     },
     fontFamily: '"Roboto","sans-serif"',
 

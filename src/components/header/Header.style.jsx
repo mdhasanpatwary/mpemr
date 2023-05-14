@@ -31,6 +31,10 @@ export const LanguageSwitchButton = styled(Button)(({ theme, active }) => ({
 }));
 
 export const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
+  backgroundColor: "transparent",
+  "&:hover": {
+    backgroundColor: "transparent",
+  },
   a: {
     position: "relative",
     display: "flex",
@@ -39,6 +43,9 @@ export const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
     gap: "5px",
     textTransform: "capitalize",
     fontSize: "1rem",
+    "&:hover": {
+      color: theme.palette.primary.main,
+    },
   },
   [theme.breakpoints.down("lg")]: {
     minHeight: "36px",

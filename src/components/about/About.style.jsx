@@ -9,7 +9,7 @@ export const CustomImageListItem = styled(ImageListItem)(({ theme }) => ({
     inlineSize: "80%",
     backgroundColor: theme.palette.background.custom,
     borderStartEndRadius: ".625rem",
-    bottom: ".25rem",
+    bottom: ".1875rem",
     ".MuiImageListItemBar-title": {
       color: theme.palette.text.primary,
     },

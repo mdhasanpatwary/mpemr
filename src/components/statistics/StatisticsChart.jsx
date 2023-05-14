@@ -51,12 +51,6 @@ const options = {
       },
       // ticks: { stepSize: 5 },
     },
-
-    yAxes: [
-      {
-        stacked: true,
-      },
-    ],
   },
 };
 

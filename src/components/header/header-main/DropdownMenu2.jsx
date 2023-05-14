@@ -44,8 +44,8 @@ const DropdownMenu2 = ({ data, title, url }) => {
             <Link href={url ? url : "#"}>
               {title}
               <Typography
-                variant="caption"
-                sx={{ svg: { inlineSize: ".75rem", blockSize: ".75rem" } }}>
+                variant="subtitle1"
+                sx={{ svg: { inlineSize: "1rem", blockSize: "1rem" } }}>
                 <AddIcon color={theme.palette.neutral[900]} />
               </Typography>
             </Link>
@@ -69,12 +69,13 @@ const DropdownMenu2 = ({ data, title, url }) => {
                   ".MuiPaper-root": {
                     pointerEvents: "auto",
                     padding: "10px",
-                    borderTopRightRadius: "0",
-                    borderTopLeftRadius: "0",
+                    ".MuiButtonBase-root a": {
+                      fontFamily: '"Inter","sans-serif"',
+                    },
                   },
                 }}>
                 {data?.map(({ title, url }, index) => (
-                  <MenuItem
+                  <CustomMenuItem
                     disableRipple
                     key={index}
                     sx={{
@@ -88,10 +89,10 @@ const DropdownMenu2 = ({ data, title, url }) => {
                       "&:not(:last-child)": {
                         // borderBottom: `1px solid ${theme.palette.divider}`,
                       },
-                      minWidth: { lg: "200px" },
+                      minInlineSize: { lg: "200px" },
                     }}>
                     <Link href={url ? url : "#"}>{title}</Link>
-                  </MenuItem>
+                  </CustomMenuItem>
                 ))}
               </Popover>
             ) : (

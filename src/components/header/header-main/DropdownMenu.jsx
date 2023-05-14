@@ -38,6 +38,7 @@ const DropdownMenu = ({ data, title, url }) => {
             display: "flex",
             inlineSize: "100%",
             justifyContent: "space-between",
+            fontFamily: '"Inter","sans-serif"',
           },
         }}>
         {data?.length ? (
@@ -45,12 +46,12 @@ const DropdownMenu = ({ data, title, url }) => {
             <Link href={url ? url : "#"}>
               {title}
               <Typography
-                variant="caption"
-                sx={{ svg: { inlineSize: ".75rem", blockSize: ".75rem" } }}>
+                variant="subtitle1"
+                sx={{ svg: { inlineSize: "1rem", blockSize: "1rem" } }}>
                 <AddIcon color={theme.palette.neutral[900]} />
               </Typography>
             </Link>
-            {!tabScreen ? (
+            {!tabScreen && (
               <Popover
                 disableScrollLock={false}
                 anchorEl={anchorEl}
@@ -71,10 +72,9 @@ const DropdownMenu = ({ data, title, url }) => {
                   ".MuiPaper-root": {
                     pointerEvents: "auto",
                     padding: "10px",
-                    borderTopRightRadius: "0",
-                    borderTopLeftRadius: "0",
                     ".MuiButtonBase-root a": {
                       fontWeight: "400!important",
+                      fontFamily: '"Inter","sans-serif"',
                     },
                   },
                 }}>
@@ -87,44 +87,15 @@ const DropdownMenu = ({ data, title, url }) => {
                         url={item?.url}
                       />
                     ) : (
-                      <MenuItem disableRipple>
+                      <CustomMenuItem disableRipple>
                         <Link href={item?.url ? item?.url : "#"}>
                           {item?.title}
                         </Link>
-                      </MenuItem>
+                      </CustomMenuItem>
                     )}
                   </React.Fragment>
                 ))}
               </Popover>
-            ) : (
-              <Collapse
-                in={open}
-                timeout="auto"
-                unmountOnExit
-                sx={{ width: "100%" }}>
-                <Box component="ul" sx={{ paddingLeft: "0" }}>
-                  {data?.map(({ title, url }, index) => (
-                    <MenuItem
-                      disableRipple
-                      key={index}
-                      sx={{
-                        minHeight: "0",
-                        paddingY: "8px",
-                        "&:hover": {
-                          // backgroundColor: "primary.light",
-                          color: theme.palette.primary.main,
-                        },
-                        borderRadius: "5px",
-                        "&:not(:last-child)": {
-                          // borderBottom: `1px solid ${theme.palette.divider}`,
-                        },
-                        minWidth: { lg: "200px" },
-                      }}>
-                      <Link href={url ? url : "#"}>{title}</Link>
-                    </MenuItem>
-                  ))}
-                </Box>
-              </Collapse>
             )}
           </>
         ) : (
