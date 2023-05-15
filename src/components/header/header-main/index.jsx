@@ -8,8 +8,16 @@ import { CustomContainer } from "../../../styled-components/CustomStyled.style";
 import DropdownMenu from "./DropdownMenu";
 import { subMenu } from "../menudata.js";
 import { DashboardIcon, SearchIcon, VideoIcon } from "../../../custom-icons";
-import { Divider } from "@mui/material";
+import {
+  Collapse,
+  Divider,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import CustomDrawer from "../../global/CustomDrawer";
+import MobileMenu from "./MobileMenu";
 const logoURL = "/image/logo.png";
 
 const HeaderMain = () => {
@@ -39,7 +47,11 @@ const HeaderMain = () => {
             })}
           </Stack>
           <Stack direction="row" alignItems="center">
-            <IconButton size="large" aria-label="Menu" color="inherit">
+            <IconButton
+              size="large"
+              aria-label="Menu"
+              color="inherit"
+              onClick={() => setOpenDrawer(true)}>
               <DashboardIcon />
             </IconButton>
             <Divider
@@ -69,7 +81,7 @@ const HeaderMain = () => {
         </Toolbar>
         {/* {showSearch && <h1>Search Component</h1>} */}
         <CustomDrawer open={openDrawer} setOpen={setOpenDrawer}>
-          <h1>HelloHellloHello</h1>
+          <MobileMenu />
         </CustomDrawer>
       </CustomContainer>
     </AppBar>

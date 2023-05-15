@@ -1,16 +1,26 @@
 import * as React from "react";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import { Stack } from "@mui/material";
 
 const CustomDrawer = ({ anchor, open, setOpen, children }) => {
   return (
     <>
-      <Button onClick={() => setOpen(true)}>left</Button>
       <Drawer
         anchor={anchor ? anchor : "left"}
         open={open}
+        sx={{
+          "& .MuiDrawer-paper": {
+            inlineSize: "320px",
+          },
+        }}
         onClose={() => setOpen(!open)}>
-        <Button onClick={() => setOpen(!open)}>Close</Button>
+        <Stack alignItems="flex-end" px={3} pt={2}>
+          <CloseOutlinedIcon
+            onClick={() => setOpen(!open)}
+            sx={{ cursor: "pointer" }}
+          />
+        </Stack>
         {children}
       </Drawer>
     </>

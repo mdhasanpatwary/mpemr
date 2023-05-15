@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import { Provider as ReduxProvider } from "react-redux";
 import { persistStore } from "redux-persist";
+import { PersistGate } from 'redux-persist/integration/react'
 import { store } from "../src/redux/store";
 import { createTheme } from "../src/theme";
 import { Toaster } from "react-hot-toast";
@@ -27,6 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <QueryClientProvider client={queryClient}>
       <ReduxProvider store={store}>
+      {/* <PersistGate loading={null} persistor={persistor}> */}
         <SettingsProvider>
           <SettingsConsumer>
             {(value) => (
@@ -43,6 +45,7 @@ const MyApp = ({ Component, pageProps }) => {
             )}
           </SettingsConsumer>
         </SettingsProvider>
+        {/* </PersistGate> */}
       </ReduxProvider>
     </QueryClientProvider>
   );
